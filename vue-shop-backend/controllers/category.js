@@ -39,13 +39,13 @@ exports.getCategories = async (req, res) => {
     }
 };
 
-    exports.getCategoryById = async (req, res) => {
+exports.getCategoryById = async (req, res) => {
     try {
         // 根據id查詢分類，且此分類必須有parentId
-            if(!req.query.id){
-                return res.status(404).json({ code: "0", msg: "未輸入分類id" });
+        if (!req.query.id) {
+            return res.status(404).json({ code: "0", msg: "未輸入分類id" });
 
-            }
+        }
         const category = await Category.findOne({
             where: { id: req.query.id },
             include: [{ model: Category, as: 'parent' }]
@@ -84,7 +84,7 @@ exports.getCategories = async (req, res) => {
 exports.getCategoryWithChildren = async (req, res) => {
     try {
         const categoryId = req.query.id;
-        if(!categoryId){
+        if (!categoryId) {
             return res.status(404).json({ code: "0", msg: "未輸入分類id" });
 
         }
@@ -226,7 +226,7 @@ function formatCategoryWithGood(category) {
         id: category.id,
         name: category.name,
         picture: category.picture,
-        saleInfo: category.saleInfo || "大额优惠\r\n等你来拿", // 預設 `saleInfo`
+        saleInfo: category.saleInfo || "大額優惠\r\n等你來拿", // 預設 `saleInfo`
         children: category.children ? category.children.map(child => formatSubCategoryWithGood(child)) : null,
         goods: category.goods ? category.goods.map(good => formatProductWithCategory(good)) : null
     };
