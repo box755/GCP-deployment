@@ -9,6 +9,7 @@
               <h2>座位抽籤系統</h2>
             </div>
             <p class="subtitle">管理平台登入</p>
+            <p class="test-account">測試帳號：admin / 測試密碼：admin123</p>
           </div>
         </template>
 
@@ -243,6 +244,16 @@ export default {
   color: #606266;
   font-size: 16px;
   margin: 0;
+}
+
+.test-account {
+  color: #909399;
+  font-size: 13px;
+  margin: 8px 0 0 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 .login-form {
