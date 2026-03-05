@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  # === 1. 共用的 MySQL 資料庫 ===
+  mysql-db:
+    image: mysql:8.0
+    container_name: shared-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: kk865610
+      MYSQL_DATABASE: seat_lottery # 啟動時自動建立抽籤系統的 DB
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-pkk865610" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  # === 2. 抽籤系統後端 (Chou Cian System - Java/Tomcat) ===
+  chou-cian-backend:
+    build: ./chou-cian-system/backend
+    container_name: backend-chou-cian
+    restart: always
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_HOST=mysql-db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=kk865610
+      - DB_NAME=seat_lottery
+
+  # === 3. 電商系統後端 (Vue Shop - Node.js/Express) ===
+  vue-shop-backend:
+    build: ./vue-shop-backend
+    container_name: backend-vue-shop
+    restart: always
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+    ports:
+      - "3030:3030"
+    environment:
+      - APP_PORT=3030
+      - DB_HOST=mysql-db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASS=kk865610
+      - DB_MYSQL_DB=myvueshop2
+      - DB_POOL_MIN=0
+      - DB_POOL_MAX=5
+      - DB_POOL_ACQUIRE=30000
+      - DB_POOL_IDLE=10000
+      - DB_DIALECT=mysql
+      - FRONT_END_PATH=http://vue-shop-frontend:80
+
+  # === 4. 抽籤系統前端 (Nginx) ===
+  chou-cian-frontend:
+    build: ./chou-cian-system/chiu-chien
+    container_name: frontend-chou-cian
+    restart: always
+    depends_on:
+      - chou-cian-backend
+    ports:
+      - "8081:80"
+
+  # === 5. 電商系統前端 (Nginx) ===
+  vue-shop-frontend:
+    build: ./vue-shop
+    container_name: frontend-vue-shop
+    restart: always
+    depends_on:
+      - vue-shop-backend
+    ports:
+      - "8082:80"
+
+volumes:
+  db_data:
