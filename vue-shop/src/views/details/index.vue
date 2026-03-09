@@ -41,10 +41,10 @@ onMounted(() => {
 
 <!--          需使用?.，避免響應式變量在還沒取得資料前，無法讀取其category成員-->
           <el-breadcrumb-item :to="{ path: '/' }">首頁</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: `/category/${goodsDetail.categories[1].id}` }">{{ goodsDetail.categories[1].name }}
+          <el-breadcrumb-item :to="{ path: `/category/${goodsDetail.categories[0].id}` }">{{ goodsDetail.categories[0].name }}
           </el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: `/category/sub/${goodsDetail.categories[0].id}` }">
-            {{ goodsDetail.categories[0].name }}
+          <el-breadcrumb-item :to="{ path: `/category/sub/${goodsDetail.categories[1].id}` }">
+            {{ goodsDetail.categories[1].name }}
           </el-breadcrumb-item>
           <el-breadcrumb-item>{{ goodsDetail.name }}</el-breadcrumb-item>
         </el-breadcrumb>
