@@ -45,7 +45,7 @@ onMounted(() => {
       <img :src="item.picture" alt="" />
       <p class="name ellipsis">{{ item.name }}</p>
       <p class="desc ellipsis">{{ item.desc }}</p>
-      <p class="price">&yen;200.00</p>
+      <p class="price">NT$200.00</p>
     </RouterLink>
   </div>
 </template>

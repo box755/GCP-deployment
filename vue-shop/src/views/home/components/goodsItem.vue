@@ -16,7 +16,7 @@ defineProps({
     <img v-lazy-img="good.picture" src="" alt="" />
     <p class="name ellipsis">{{ good.name }}</p>
     <p class="desc ellipsis">{{ good.desc }}</p>
-    <p class="price">&yen;{{ good.price }}</p>
+    <p class="price">NT${{ good.price }}</p>
   </RouterLink>
 </template>
 

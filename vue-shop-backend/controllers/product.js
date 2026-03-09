@@ -9,7 +9,7 @@ exports.getHotProducts = async (req, res) => {
         // 查詢4項商品作為熱門商品
         const products = await Product.findAll({
             limit: 4,
-            offset:0,
+            offset: 0,
         });
 
         // 格式化數據
@@ -29,17 +29,57 @@ exports.getHotProducts = async (req, res) => {
 
 exports.getNewProducts = async (req, res) => {
     try {
-        // 查詢第4項至第5項商品作為最新商品
         const products = await Product.findAll({
             limit: 4,
-            offset:4
+            offset: 4
         });
 
-        // 格式化數據
         const response = {
             code: "1",
             msg: "操作成功",
             result: products.map(product => formatNewProduct(product))
+        };
+
+        res.status(200).json(response);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ code: "0", msg: "系統錯誤" });
+    }
+};
+
+
+exports.getBestSellerProducts = async (req, res) => {
+    try {
+        const products = await Product.findAll({
+            limit: 4,
+            order: [['salesCount', 'DESC']]
+        });
+
+        const response = {
+            code: "1",
+            msg: "操作成功",
+            result: products.map(product => formatHotProduct(product))
+        };
+
+        res.status(200).json(response);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ code: "0", msg: "系統錯誤" });
+    }
+};
+
+
+exports.getMustBuyProducts = async (req, res) => {
+    try {
+        const products = await Product.findAll({
+            limit: 4,
+            order: [['discount', 'ASC']]
+        });
+
+        const response = {
+            code: "1",
+            msg: "操作成功",
+            result: products.map(product => formatHotProduct(product))
         };
 
         res.status(200).json(response);

@@ -105,7 +105,31 @@ INSERT INTO `products` (`id`, `name`, `picture`, `desc`, `price`, `orderNum`, `d
 ('prod-015', '極潤保濕精華液 50ml',      'https://yanxuan-item.nosdn.127.net/354e2239de1032f4bcb4f4e3d72741e4.png', '深層保濕，水潤透亮',           '1680.00', '8900', '6.5', '723', '2580.00', '500',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/354e2239de1032f4bcb4f4e3d72741e4.png"]',                                            '3800', '723', '512', NULL, 'false', 'SPU-SKC-001', 'false', 'brand-shiseido','cat-skincare', NOW(), NOW()),
 
 -- 美妝 > 彩妝
-('prod-016', '絲絨霧面唇膏組合',        'https://yanxuan-item.nosdn.127.net/e11d8c0a0fa73e68788ecaba3950565c.png', '持久顯色，不乾不裂',           '890.00',  '8400', '7.5', '456', '1290.00', '700',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/e11d8c0a0fa73e68788ecaba3950565c.png"]',                                            '4100', '456', '334', NULL, 'false', 'SPU-MKP-001', 'false', 'brand-shiseido','cat-makeup', NOW(), NOW());
+('prod-016', '絲絨霧面唇膏組合',        'https://yanxuan-item.nosdn.127.net/e11d8c0a0fa73e68788ecaba3950565c.png', '持久顯色，不乾不裂',           '890.00',  '8400', '7.5', '456', '1290.00', '700',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/e11d8c0a0fa73e68788ecaba3950565c.png"]',                                            '4100', '456', '334', NULL, 'false', 'SPU-MKP-001', 'false', 'brand-shiseido','cat-makeup', NOW(), NOW()),
+
+-- 居家 > 床品
+('prod-017', '太空記憶枕 慢回彈',        'https://yanxuan-item.nosdn.127.net/3dda16a0ad847a317e585cdee8bd1c3a.png', '護頸設計，深度好眠',           '599.00',  '9600', '5.5', '892', '1099.00', '600',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/3dda16a0ad847a317e585cdee8bd1c3a.png"]',                                            '9200', '892', '678', NULL, 'false', 'SPU-BED-003', 'false', 'brand-muji', 'cat-bed', NOW(), NOW()),
+
+-- 居家 > 衛浴用品
+('prod-018', '植物精油香氛蠟燭 200g',    'https://yanxuan-item.nosdn.127.net/f7c0e35f0e83a7256a7acf6a78f76f70.png', '天然植萃，舒緩放鬆',           '280.00',  '7400', '5.0', '345', '560.00',  '900',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/f7c0e35f0e83a7256a7acf6a78f76f70.png"]',                                            '6800', '345', '290', NULL, 'false', 'SPU-BTH-001', 'false', 'brand-hola', 'cat-bath', NOW(), NOW()),
+
+-- 美食 > 零食
+('prod-019', '手工曲奇餅乾禮盒 12入',   'https://yanxuan-item.nosdn.127.net/89781be8a3d2a28eea4bf8cf5ee12b4d.png', '奶香濃郁，送禮首選',           '320.00',  '8300', '5.5', '678', '580.00',  '1200', NULL, NULL, '["https://yanxuan-item.nosdn.127.net/89781be8a3d2a28eea4bf8cf5ee12b4d.png"]',                                            '7500', '678', '445', NULL, 'false', 'SPU-SNK-003', 'false', NULL,          'cat-snack', NOW(), NOW()),
+
+-- 美食 > 飲品
+('prod-020', '氣泡礦泉水 330ml x 24',   'https://yanxuan-item.nosdn.127.net/9c73c94ccb1c64b22cfb3c0ade5d8f37.png', '天然氣泡，清新解渴',           '480.00',  '8000', '6.0', '234', '780.00',  '400',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/9c73c94ccb1c64b22cfb3c0ade5d8f37.png"]',                                            '5600', '234', '167', NULL, 'false', 'SPU-DRK-002', 'false', NULL,          'cat-drink', NOW(), NOW()),
+
+-- 服飾 > 男裝
+('prod-021', '輕量防風連帽外套',         'https://yanxuan-item.nosdn.127.net/3bb2e16a4c5183b1ebe74c62ad2f06bf.png', '防風防潑水，戶外必備',         '1499.00', '9400', '5.0', '567', '2999.00', '350',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/3bb2e16a4c5183b1ebe74c62ad2f06bf.png"]',                                            '8800', '567', '401', NULL, 'false', 'SPU-MEN-003', 'false', 'brand-uniqlo','cat-men',   NOW(), NOW()),
+
+-- 服飾 > 女裝
+('prod-022', '柔軟親膚針織毛衣',         'https://yanxuan-item.nosdn.127.net/60d0d3efbce31aaaf498e1c359805d84.png', '溫柔觸感，秋冬百搭',           '899.00',  '8700', '5.5', '412', '1599.00', '500',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/60d0d3efbce31aaaf498e1c359805d84.png"]',                                            '6200', '412', '356', NULL, 'false', 'SPU-WMN-003', 'false', NULL,          'cat-women', NOW(), NOW()),
+
+-- 數碼 > 電腦週邊
+('prod-023', '真無線藍牙降噪耳機',       'https://yanxuan-item.nosdn.127.net/53994cd6050aa08f7e80aadd7ebfb875.png', '主動降噪，沉浸體驗',           '2490.00', '9300', '5.0', '834', '4980.00', '300',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/53994cd6050aa08f7e80aadd7ebfb875.png"]',                                            '7100', '834', '523', NULL, 'false', 'SPU-CMP-002', 'false', 'brand-apple', 'cat-computer', NOW(), NOW()),
+
+-- 美妝 > 護膚
+('prod-024', '清爽防曬乳 SPF50+ 60ml',  'https://yanxuan-item.nosdn.127.net/354e2239de1032f4bcb4f4e3d72741e4.png', '高效防曬，清爽不黏膩',         '450.00',  '8800', '5.5', '923', '820.00',  '800',  NULL, NULL, '["https://yanxuan-item.nosdn.127.net/354e2239de1032f4bcb4f4e3d72741e4.png"]',                                            '8100', '923', '612', NULL, 'false', 'SPU-SKC-002', 'false', 'brand-shiseido','cat-skincare', NOW(), NOW());
 
 -- ============================================
 -- 5. 輪播圖 (Banners)
@@ -147,6 +171,7 @@ INSERT INTO `spec_values` (`id`, `value`, `picture`, `description`, `specId`, `c
 ('sv-black',     '黑色',     'https://yanxuan-item.nosdn.127.net/color-black.png',  '經典黑',   'spec-color', NOW(), NOW()),
 ('sv-pink',      '粉色',     'https://yanxuan-item.nosdn.127.net/color-pink.png',   '柔美粉',   'spec-color', NOW(), NOW()),
 ('sv-blue',      '天藍色',   'https://yanxuan-item.nosdn.127.net/color-blue.png',   '清爽天藍', 'spec-color', NOW(), NOW()),
+('sv-red',       '紅色',     'https://yanxuan-item.nosdn.127.net/color-red.png',    '熱情紅',   'spec-color', NOW(), NOW()),
 -- 尺寸
 ('sv-single',    '單人',     NULL, '150x200cm',       'spec-size', NOW(), NOW()),
 ('sv-double',    '雙人',     NULL, '180x200cm',       'spec-size', NOW(), NOW()),
@@ -162,10 +187,12 @@ INSERT INTO `spec_values` (`id`, `value`, `picture`, `description`, `specId`, `c
 -- 容量
 ('sv-50ml',      '50ml',     NULL, '體驗裝',  'spec-capacity', NOW(), NOW()),
 ('sv-100ml',     '100ml',    NULL, '正裝',    'spec-capacity', NOW(), NOW()),
+('sv-200ml',     '200ml',    NULL, '家庭裝',  'spec-capacity', NOW(), NOW()),
 -- 口味
 ('sv-original',  '原味',     NULL, NULL, 'spec-flavor', NOW(), NOW()),
 ('sv-bbq',       '燒烤味',   NULL, NULL, 'spec-flavor', NOW(), NOW()),
-('sv-sourcream', '酸奶油洋蔥','NULL', NULL, 'spec-flavor', NOW(), NOW());
+('sv-sourcream', '酸奶油洋蔥','NULL', NULL, 'spec-flavor', NOW(), NOW()),
+('sv-green-tea', '抹茶味',   NULL, NULL, 'spec-flavor', NOW(), NOW());
 
 -- ============================================
 -- 9. SKU (庫存單位)
@@ -202,7 +229,29 @@ INSERT INTO `skus` (`id`, `skuCode`, `price`, `oldPrice`, `inventory`, `picture`
 
 -- prod-016 絲絨霧面唇膏 (顏色)
 ('sku-020', 'MKP001-PINK',    '890.00',  '1290.00', '250', 'https://yanxuan-item.nosdn.127.net/sku-lip-pink.png',  'prod-016', NOW(), NOW()),
-('sku-021', 'MKP001-RED',     '890.00',  '1290.00', '200', 'https://yanxuan-item.nosdn.127.net/sku-lip-red.png',   'prod-016', NOW(), NOW());
+('sku-021', 'MKP001-RED',     '890.00',  '1290.00', '200', 'https://yanxuan-item.nosdn.127.net/sku-lip-red.png',   'prod-016', NOW(), NOW()),
+
+-- prod-017 太空記憶枕 (顏色)
+('sku-022', 'BED003-WHT',     '599.00',  '1099.00', '300', 'https://yanxuan-item.nosdn.127.net/sku-bed-white.png', 'prod-017', NOW(), NOW()),
+('sku-023', 'BED003-GRY',     '599.00',  '1099.00', '300', 'https://yanxuan-item.nosdn.127.net/sku-bed-gray.png',  'prod-017', NOW(), NOW()),
+
+-- prod-019 手工曲奇餅乾 (口味)
+('sku-024', 'SNK003-ORIG',    '320.00',  '580.00',  '600', 'https://yanxuan-item.nosdn.127.net/sku-chips-orig.png','prod-019', NOW(), NOW()),
+('sku-025', 'SNK003-GT',      '320.00',  '580.00',  '600', 'https://yanxuan-item.nosdn.127.net/sku-chips-orig.png','prod-019', NOW(), NOW()),
+
+-- prod-021 防風外套 (顏色 x 尺寸)
+('sku-026', 'MEN003-BLK-M',   '1499.00', '2999.00', '100', 'https://yanxuan-item.nosdn.127.net/sku-tee-black.png', 'prod-021', NOW(), NOW()),
+('sku-027', 'MEN003-BLK-L',   '1499.00', '2999.00', '80',  'https://yanxuan-item.nosdn.127.net/sku-tee-black.png', 'prod-021', NOW(), NOW()),
+('sku-028', 'MEN003-NVY-M',   '1499.00', '2999.00', '90',  'https://yanxuan-item.nosdn.127.net/sku-tee-navy.png',  'prod-021', NOW(), NOW()),
+('sku-029', 'MEN003-NVY-L',   '1499.00', '2999.00', '80',  'https://yanxuan-item.nosdn.127.net/sku-tee-navy.png',  'prod-021', NOW(), NOW()),
+
+-- prod-023 藍牙耳機 (顏色)
+('sku-030', 'CMP002-BLK',     '2490.00', '4980.00', '150', 'https://yanxuan-item.nosdn.127.net/sku-shoe-black.png','prod-023', NOW(), NOW()),
+('sku-031', 'CMP002-WHT',     '2490.00', '4980.00', '150', 'https://yanxuan-item.nosdn.127.net/sku-shoe-white.png','prod-023', NOW(), NOW()),
+
+-- prod-024 防曬乳 (容量)
+('sku-032', 'SKC002-50ML',    '450.00',  '820.00',  '400', 'https://yanxuan-item.nosdn.127.net/sku-serum-50.png',  'prod-024', NOW(), NOW()),
+('sku-033', 'SKC002-100ML',   '780.00',  '1420.00', '400', 'https://yanxuan-item.nosdn.127.net/sku-serum-100.png', 'prod-024', NOW(), NOW());
 
 -- ============================================
 -- 10. SKU ↔ SpecValue 多對多關聯
@@ -253,7 +302,33 @@ INSERT INTO `sku_spec_values` (`skuId`, `specValueId`, `createdAt`, `updatedAt`)
 
 -- 唇膏 SKU
 ('sku-020', 'sv-pink',     NOW(), NOW()),
-('sku-021', 'sv-black',    NOW(), NOW());
+('sku-021', 'sv-black',    NOW(), NOW()),
+
+-- 記憶枕 SKU
+('sku-022', 'sv-white',    NOW(), NOW()),
+('sku-023', 'sv-gray',     NOW(), NOW()),
+
+-- 手工曲奇 SKU
+('sku-024', 'sv-original', NOW(), NOW()),
+('sku-025', 'sv-green-tea', NOW(), NOW()),
+
+-- 防風外套 SKU
+('sku-026', 'sv-black',    NOW(), NOW()),
+('sku-026', 'sv-m',        NOW(), NOW()),
+('sku-027', 'sv-black',    NOW(), NOW()),
+('sku-027', 'sv-l',        NOW(), NOW()),
+('sku-028', 'sv-navy',     NOW(), NOW()),
+('sku-028', 'sv-m',        NOW(), NOW()),
+('sku-029', 'sv-navy',     NOW(), NOW()),
+('sku-029', 'sv-l',        NOW(), NOW()),
+
+-- 藍牙耳機 SKU
+('sku-030', 'sv-black',    NOW(), NOW()),
+('sku-031', 'sv-white',    NOW(), NOW()),
+
+-- 防曬乳 SKU
+('sku-032', 'sv-50ml',     NOW(), NOW()),
+('sku-033', 'sv-100ml',    NOW(), NOW());
 
 -- ============================================
 -- 完成！

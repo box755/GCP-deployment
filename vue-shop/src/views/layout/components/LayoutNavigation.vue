@@ -1,11 +1,4 @@
 <script setup>
-import router from "@/router/index.js";
-
-const handleConfirm = () => {
-  // 確認後跳轉到首頁或其他一級路由
-  router.push('/login');
-
-}
 </script>
 
 <template>
@@ -14,15 +7,9 @@ const handleConfirm = () => {
       <ul>
         <template v-if="true">
           <li><a href="javascript:;"><i class="iconfont icon-user"></i>周杰倫</a></li>
-          <li>
-            <el-popconfirm title="確認退出嗎?" confirm-button-text="確認" cancel-button-text="取消" @confirm="handleConfirm">
-              <template #reference>
-                <a href="javascript:;">退出登入</a>
-              </template>
-            </el-popconfirm>
-          </li>
-          <li><router-link to="/account">會員中心</router-link></li>
-          <li><router-link to="/order">我的訂單</router-link></li>
+          <li><a href="javascript:;" class="disabled-link">退出登入（待開發）</a></li>
+          <li><a href="javascript:;" class="disabled-link">會員中心（待開發）</a></li>
+          <li><a href="javascript:;" class="disabled-link">我的訂單（待開發）</a></li>
         </template>
         <template v-else>
           <li><a href="javascript:;">請先登入</a></li>
@@ -74,6 +61,17 @@ const handleConfirm = () => {
         &:hover {
           color: color.adjust($xtxColor, $lightness: -10%);
           background: rgba(255, 255, 255, 0.1);
+        }
+
+        &.disabled-link {
+          color: #888;
+          cursor: not-allowed;
+          opacity: 0.6;
+
+          &:hover {
+            color: #888;
+            background: none;
+          }
         }
       }
 
