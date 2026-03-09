@@ -17,12 +17,12 @@ const categoryList = toRef(store, 'categoryList'); // 保持響應性
       <li v-for="item in categoryList" :key="item.id" class="menu-item">
         <div class="menu-header">
 <!--          RouterLink類次 a，但不會重加載，只在前端路由-->
-          <RouterLink to="/" class="primary-link">
+          <RouterLink :to="`/category/${item.id}`" class="primary-link">
             <span class="category-icon"></span>
             {{ item.name }}
           </RouterLink>
           <div class="sub-links">
-            <RouterLink v-for="i in item.children.slice(0, 2)" :key="i" to="/" class="sub-link">
+            <RouterLink v-for="i in item.children.slice(0, 2)" :key="i.id" :to="`/category/sub/${i.id}`" class="sub-link">
               {{ i.name }}
             </RouterLink>
           </div>
@@ -36,7 +36,7 @@ const categoryList = toRef(store, 'categoryList'); // 保持響應性
 
           <div class="product-grid">
             <div v-for="i in item.goods" :key="i.id" class="product-card">
-              <RouterLink :to="`/detail/${item.id}`">
+              <RouterLink :to="`/detail/${i.id}`">
                 <div class="product-image">
                   <img :src="i.picture" alt="商品图片" />
                 </div>

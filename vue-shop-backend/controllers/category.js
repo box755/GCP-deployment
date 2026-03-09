@@ -259,12 +259,23 @@ function formatCategoryWithChild(child) {
 }
 
 function formatCategory(category) {
+    let goods = [];
+    if (category.goods && category.goods.length > 0) {
+        goods = category.goods.map(good => formatProduct(good));
+    } else if (category.children) {
+        category.children.forEach(child => {
+            if (child.goods) {
+                goods.push(...child.goods.map(good => formatProduct(good)));
+            }
+        });
+    }
+
     return {
         id: category.id,
         name: category.name,
         picture: category.picture,
-        children: category.children ? category.children.map(child => formatCategory(child)) : null, // 遞迴處理子分類
-        goods: category.goods && category.goods.length > 0 ? category.goods.map(good => formatProduct(good)) : null
+        children: category.children ? category.children.map(child => formatCategory(child)) : null,
+        goods: goods.length > 0 ? goods : null
     };
 }
 
